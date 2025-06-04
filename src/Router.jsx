@@ -1,20 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-import Landing from './Pages/Landing/Landing';
-import Auth from './Pages/Auth/Auth';
-import Payment from './Pages/Payment/Payment';
-import Orders from './Pages/Orders/Orders';
-import Cart from './Pages/Cart/Cart';
-import Results from './Pages/Results/Results';
-import ProductDetail from './Pages/ProductDetail/ProductDetail';
-import { Elements} from "@stripe/react-stripe-js";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landing from "./Pages/Landing/Landing";
+import Auth from "./Pages/Auth/Auth";
+import Payment from "./Pages/Payment/Payment";
+import Orders from "./Pages/Orders/Orders";
+import Cart from "./Pages/Cart/Cart";
+import Results from "./Pages/Results/Results";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import ProtectedRoute from './Components/Protectedroute';
-
-
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function Routing() {
-
   const stripePromise = loadStripe(
     "pk_test_51RTxY3R16yhfGL2lsHkQUiluVRvwsx5KMTIFfWZ6yGk4Z6gMlPt1xPzvgwPv3TEqH8IzY0mzi8bE0st37Is2GiGH00cXD4WyDn"
   );
@@ -56,4 +53,4 @@ function Routing() {
   );
 }
 
-export default Routing
+export default Routing;
