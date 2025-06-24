@@ -5,7 +5,7 @@ const axiosInstance = axios.create({
   // baseURL: "http://127.0.0.1:5001/clone-a1e6b/us-central1/api",
 
   //deployed version of firebase function
-  baseURL: "https://api-7xp6jln3pq-uc.a.run.app",
+  baseURL: process.env.VITE_FUNCTIONS_BASE_URL,
 
   //deployed version of amazon server on render.com
   // baseURL: "https://amazon-api-deploy-tjtq.onrender.com",
