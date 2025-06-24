@@ -12,7 +12,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
 function Routing() {
-  const stripePromise = loadStripe(process.env.VITE_STRIPE_PUBLISHABLE_KEY);
+  const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
   return (
     <Router>
